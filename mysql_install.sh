@@ -101,4 +101,4 @@ chown -R mysql.mysql $datadir
 chown -R mysql.mysql $basedir
 
 # 启动程序和 mysql环境安全初始化
-service mysqld start && mysql_secure_installation || echo "启动mysql失败,请检查"
+service mysqld start && exec mysql_secure_installation 
